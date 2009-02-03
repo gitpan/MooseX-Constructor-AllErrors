@@ -1,0 +1,11 @@
+Changes
+LICENSE
+MANIFEST
+META.yml
+Makefile.PL
+README
+lib/MooseX/Constructor/AllErrors.pm
+lib/MooseX/Constructor/AllErrors/Error.pm
+lib/MooseX/Constructor/AllErrors/Meta/Attribute.pm
+lib/MooseX/Constructor/AllErrors/Meta/Class.pm
+t/001_basic.t
