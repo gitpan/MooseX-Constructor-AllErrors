@@ -1,6 +1,6 @@
 # vim: ts=4 sts=4 sw=4
 package MooseX::Constructor::AllErrors::Meta::Class;
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 
 use Moose::Role;
@@ -24,7 +24,12 @@ override construct_instance => sub {
             $attr->initialize_instance_slot($meta_instance, $instance, $params);
         };
         if (my $e = $@) {
-            $error->add_error($@);
+            if (blessed $e and 
+                $e->isa('MooseX::Constructor::AllErrors::Error')) {
+                $error->add_error($@); 
+            } else {
+                die $e;
+            }
         }
     }
     if ($error->has_errors) {

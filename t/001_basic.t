@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Test::More tests => 11;
+use Test::More tests => 13;
 
 {
   package Foo;
@@ -15,6 +15,11 @@ use Test::More tests => 11;
   has baz => (
     is => 'ro',
     isa => 'Int',
+  );
+
+  has quux => (
+    is => 'ro',
+    trigger => sub { 1/0 },
   );
 
   no MooseX::Constructor::AllErrors;
@@ -33,6 +38,7 @@ is($t->attribute, Foo->meta->get_attribute('bar'));
 is($t->message, 'Attribute (bar) is required');
 isa_ok($t = $e->errors->[1], 'MooseX::Constructor::AllErrors::Error::TypeConstraint');
 is($t->attribute, Foo->meta->get_attribute('baz'));
+is($t->data, 'hello');
 is($t->message,
   q{Attribute (baz) does not pass the type constraint because: Validation failed for 'Int' failed with value hello}
 );
@@ -43,4 +49,7 @@ is(
   "message is first error's message",
 );
 
-is("$e", "Attribute (bar) is required at " . __FILE__ . " line 27");
+is("$e", "Attribute (bar) is required at " . __FILE__ . " line 32");
+
+eval { Foo->new(bar => 1, quux => 1) };
+like $@, qr/Illegal division by zero/, "unrecognized error rethrown";

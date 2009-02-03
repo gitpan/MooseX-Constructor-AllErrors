@@ -1,13 +1,16 @@
 # vim: ts=4 sts=4 sw=4
 package MooseX::Constructor::AllErrors::Error;
-our $VERSION = '0.001';
-
-
-package MooseX::Constructor::AllErrors::Error::Constructor;
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 
 use Moose;
+
+package MooseX::Constructor::AllErrors::Error::Constructor;
+our $VERSION = '0.002';
+
+
+use Moose;
+extends 'MooseX::Constructor::AllErrors::Error';
 
 has errors => (
     is => 'ro',
@@ -53,10 +56,11 @@ use overload (
 );
 
 package MooseX::Constructor::AllErrors::Error::Required;
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 
 use Moose;
+extends 'MooseX::Constructor::AllErrors::Error';
 
 has attribute => (
     is => 'ro',
@@ -71,10 +75,11 @@ sub message {
 }
 
 package MooseX::Constructor::AllErrors::Error::TypeConstraint;
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 
 use Moose;
+extends 'MooseX::Constructor::AllErrors::Error';
 
 has attribute => (
     is => 'ro',
