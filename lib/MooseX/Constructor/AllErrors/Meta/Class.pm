@@ -1,6 +1,6 @@
 # vim: ts=4 sts=4 sw=4
 package MooseX::Constructor::AllErrors::Meta::Class;
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 
 
 use Moose::Role;

@@ -1,5 +1,5 @@
 package MooseX::Constructor::AllErrors;
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 
 
 use strict;
@@ -40,7 +40,7 @@ MooseX::Constructor::AllErrors - capture all constructor errors
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 
@@ -52,7 +52,7 @@ version 0.002
 
   ...
 
-  eval { MyClass->new };
+  eval { MyClass->new(bar => "hello") };
   # $@->errors has two errors, not just the missing required attribute
 
 =head1 DESCRIPTION

@@ -1,12 +1,12 @@
 # vim: ts=4 sts=4 sw=4
 package MooseX::Constructor::AllErrors::Error;
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 
 
 use Moose;
 
 package MooseX::Constructor::AllErrors::Error::Constructor;
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 
 
 use Moose;
@@ -56,7 +56,7 @@ use overload (
 );
 
 package MooseX::Constructor::AllErrors::Error::Required;
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 
 
 use Moose;
@@ -75,7 +75,7 @@ sub message {
 }
 
 package MooseX::Constructor::AllErrors::Error::TypeConstraint;
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 
 
 use Moose;
