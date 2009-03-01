@@ -1,12 +1,12 @@
 # vim: ts=4 sts=4 sw=4
 package MooseX::Constructor::AllErrors::Error;
-our $VERSION = '0.003';
+our $VERSION = '0.004';
 
 
 use Moose;
 
 package MooseX::Constructor::AllErrors::Error::Constructor;
-our $VERSION = '0.003';
+our $VERSION = '0.004';
 
 
 use Moose;
@@ -24,6 +24,29 @@ has caller => (
     is => 'ro',
     isa => 'ArrayRef',
     required => 1,
+);
+
+sub _errors_by_type {
+    my ($self, $type) = @_;
+    return [ grep { 
+        $_->isa("MooseX::Constructor::AllErrors::Error::$type")
+    } $self->errors ];
+}
+
+has missing => (
+    is => 'ro',
+    isa => 'ArrayRef',
+    auto_deref => 1,
+    lazy => 1,
+    default => sub { shift->_errors_by_type('Required') },
+);
+
+has invalid => (
+    is => 'ro',
+    isa => 'ArrayRef',
+    auto_deref => 1,
+    lazy => 1,
+    default => sub { shift->_errors_by_type('TypeConstraint') },
 );
 
 sub has_errors {
@@ -56,7 +79,7 @@ use overload (
 );
 
 package MooseX::Constructor::AllErrors::Error::Required;
-our $VERSION = '0.003';
+our $VERSION = '0.004';
 
 
 use Moose;
@@ -75,7 +98,7 @@ sub message {
 }
 
 package MooseX::Constructor::AllErrors::Error::TypeConstraint;
-our $VERSION = '0.003';
+our $VERSION = '0.004';
 
 
 use Moose;
