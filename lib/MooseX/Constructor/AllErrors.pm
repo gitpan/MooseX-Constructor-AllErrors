@@ -1,5 +1,5 @@
 package MooseX::Constructor::AllErrors;
-our $VERSION = '0.004';
+our $VERSION = '0.005';
 
 
 use strict;
@@ -9,6 +9,7 @@ use Moose ();
 use Moose::Exporter;
 use Moose::Util::MetaRole;
 use MooseX::Constructor::AllErrors::Role::Object;
+use MooseX::Constructor::AllErrors::Role::Meta::Method::Constructor;
 
 Moose::Exporter->setup_import_methods;
 
@@ -22,6 +23,13 @@ sub init_meta {
     for_class => $options{for_class},
     roles => [ 'MooseX::Constructor::AllErrors::Role::Object' ],
   );
+
+  Moose::Util::MetaRole::apply_metaclass_roles(
+    for_class => $options{for_class},
+    constructor_class_roles => [
+      'MooseX::Constructor::AllErrors::Role::Meta::Method::Constructor',
+    ],
+  );
 }
 
 1;
@@ -34,7 +42,7 @@ MooseX::Constructor::AllErrors - capture all constructor errors
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 SYNOPSIS
 
