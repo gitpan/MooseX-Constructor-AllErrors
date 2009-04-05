@@ -4,6 +4,7 @@ MANIFEST
 META.yml
 Makefile.PL
 README
+dist.ini
 lib/MooseX/Constructor/AllErrors.pm
 lib/MooseX/Constructor/AllErrors/Error.pm
 lib/MooseX/Constructor/AllErrors/Role/Meta/Method/Constructor.pm

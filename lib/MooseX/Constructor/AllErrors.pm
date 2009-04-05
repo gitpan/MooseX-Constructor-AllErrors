@@ -1,5 +1,5 @@
 package MooseX::Constructor::AllErrors;
-our $VERSION = '0.005';
+our $VERSION = '0.006';
 
 
 use strict;
@@ -42,7 +42,7 @@ MooseX::Constructor::AllErrors - capture all constructor errors
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =head1 SYNOPSIS
 
