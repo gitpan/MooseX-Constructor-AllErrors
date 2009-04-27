@@ -1,5 +1,5 @@
 package MooseX::Constructor::AllErrors::Role::Meta::Method::Constructor;
-our $VERSION = '0.006';
+our $VERSION = '0.007';
 
 
 use Moose::Role;
@@ -10,7 +10,7 @@ around _generate_BUILDALL => sub {
 
   $source .= ";\n" if $source;
 
-  my @attrs = grep { defined $_->init_arg } @{$self->attributes};
+  my @attrs = grep { defined $_->init_arg } @{$self->_attributes};
   my @required = map { "'" . $_->init_arg . "' => 1," }
     grep {
       $_->is_required 
