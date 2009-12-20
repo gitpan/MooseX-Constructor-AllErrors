@@ -1,11 +1,7 @@
 package MooseX::Constructor::AllErrors::Role::Object;
-our $VERSION = '0.008';
-
-
+our $VERSION = '0.009';
 
 use Moose::Role;
-use Moose::Util;
-use MooseX::Constructor::AllErrors::Error;
 
 my $new_error = sub { 
   my $class = shift;

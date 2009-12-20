@@ -7,6 +7,9 @@ README
 dist.ini
 lib/MooseX/Constructor/AllErrors.pm
 lib/MooseX/Constructor/AllErrors/Error.pm
+lib/MooseX/Constructor/AllErrors/Error/Constructor.pm
+lib/MooseX/Constructor/AllErrors/Error/Required.pm
+lib/MooseX/Constructor/AllErrors/Error/TypeConstraint.pm
 lib/MooseX/Constructor/AllErrors/Role/Meta/Method/Constructor.pm
 lib/MooseX/Constructor/AllErrors/Role/Object.pm
 t/001_basic.t

@@ -1,7 +1,5 @@
 package MooseX::Constructor::AllErrors::Role::Meta::Method::Constructor;
-our $VERSION = '0.008';
-
-
+our $VERSION = '0.009';
 
 use Moose::Role;
 
