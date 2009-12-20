@@ -1,5 +1,6 @@
 package MooseX::Constructor::AllErrors;
-our $VERSION = '0.007';
+our $VERSION = '0.008';
+
 
 
 use strict;
@@ -42,11 +43,14 @@ MooseX::Constructor::AllErrors - capture all constructor errors
 
 =head1 VERSION
 
-version 0.007
+version 0.008
 
 =head1 SYNOPSIS
 
   package MyClass;
+our $VERSION = '0.008';
+
+
   use MooseX::Constructor::AllErrors;
 
   has foo => (is => 'ro', required => 1);

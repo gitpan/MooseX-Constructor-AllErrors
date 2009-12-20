@@ -1,11 +1,14 @@
---- 
-abstract: capture all constructor errors
-author: 
-  - Hans Dieter Pearcey <hdp@cpan.org>
-generated_by: Dist::Zilla::Plugin::MetaYaml version 1.004
+---
+abstract: 'capture all constructor errors'
+author:
+  - 'Hans Dieter Pearcey <hdp@cpan.org>'
+generated_by: 'Dist::Zilla version 1.093220'
 license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
 name: MooseX-Constructor-AllErrors
-requires: 
+requires:
   Moose: 0.65
   Test::More: 0
-version: 0.007
+version: 0.008
