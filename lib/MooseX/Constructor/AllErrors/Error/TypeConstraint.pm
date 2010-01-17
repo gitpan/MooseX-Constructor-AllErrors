@@ -1,5 +1,5 @@
 package MooseX::Constructor::AllErrors::Error::TypeConstraint;
-our $VERSION = '0.009';
+our $VERSION = '0.010';
 
 use Moose;
 extends 'MooseX::Constructor::AllErrors::Error';
@@ -32,7 +32,7 @@ MooseX::Constructor::AllErrors::Error::TypeConstraint - represents a type constr
 
 =head1 VERSION
 
-version 0.009
+version 0.010
 
 =head1 DESCRIPTION
 

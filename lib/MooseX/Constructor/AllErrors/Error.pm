@@ -1,6 +1,6 @@
 # vim: ts=4 sts=4 sw=4
 package MooseX::Constructor::AllErrors::Error;
-our $VERSION = '0.009';
+our $VERSION = '0.010';
 
 use Moose;
 
@@ -13,7 +13,7 @@ MooseX::Constructor::AllErrors::Error - base class for individual constructor er
 
 =head1 VERSION
 
-version 0.009
+version 0.010
 
 =head1 DESCRIPTION
 
