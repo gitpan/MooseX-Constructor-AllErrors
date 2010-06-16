@@ -1,5 +1,7 @@
 package MooseX::Constructor::AllErrors::Error::Constructor;
-our $VERSION = '0.010';
+BEGIN {
+  $MooseX::Constructor::AllErrors::Error::Constructor::VERSION = '0.011';
+}
 
 use Moose;
 
@@ -78,7 +80,7 @@ MooseX::Constructor::AllErrors::Error::Constructor - error class for MooseX::Con
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 DESCRIPTION
 

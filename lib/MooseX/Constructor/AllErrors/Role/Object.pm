@@ -1,5 +1,7 @@
 package MooseX::Constructor::AllErrors::Role::Object;
-our $VERSION = '0.010';
+BEGIN {
+  $MooseX::Constructor::AllErrors::Role::Object::VERSION = '0.011';
+}
 
 use Moose::Role;
 

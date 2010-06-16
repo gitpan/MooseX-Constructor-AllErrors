@@ -1,5 +1,7 @@
 package MooseX::Constructor::AllErrors;
-our $VERSION = '0.010';
+BEGIN {
+  $MooseX::Constructor::AllErrors::VERSION = '0.011';
+}
 
 use Moose ();
 use Moose::Exporter;
@@ -26,7 +28,7 @@ MooseX::Constructor::AllErrors - capture all constructor errors
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 SYNOPSIS
 
