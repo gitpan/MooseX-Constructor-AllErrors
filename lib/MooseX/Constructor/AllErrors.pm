@@ -1,6 +1,6 @@
 package MooseX::Constructor::AllErrors;
 BEGIN {
-  $MooseX::Constructor::AllErrors::VERSION = '0.011';
+  $MooseX::Constructor::AllErrors::VERSION = '0.012';
 }
 
 use Moose ();
@@ -13,9 +13,11 @@ use MooseX::Constructor::AllErrors::Error::TypeConstraint;
 
 Moose::Exporter->setup_import_methods(
     base_class_roles => [ 'MooseX::Constructor::AllErrors::Role::Object' ],
-    constructor_class_roles => [
-      'MooseX::Constructor::AllErrors::Role::Meta::Method::Constructor',
-    ],
+    class_metaroles  => {
+        constructor  => [
+            'MooseX::Constructor::AllErrors::Role::Meta::Method::Constructor',
+        ],
+    },
 );
 
 1;
@@ -28,7 +30,7 @@ MooseX::Constructor::AllErrors - capture all constructor errors
 
 =head1 VERSION
 
-version 0.011
+version 0.012
 
 =head1 SYNOPSIS
 

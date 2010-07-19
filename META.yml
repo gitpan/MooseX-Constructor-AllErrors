@@ -6,7 +6,7 @@ build_requires: {}
 configure_requires:
   ExtUtils::MakeMaker: 6.31
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.101612, CPAN::Meta::Converter version 2.101610'
+generated_by: 'Dist::Zilla version 4.101780, CPAN::Meta::Converter version 2.101670'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -16,4 +16,4 @@ requires:
   Moose: 1.04
   Test::Exception: 0
   Test::More: 0
-version: 0.011
+version: 0.012

@@ -1,3 +1,7 @@
+0.012   2010-07-19
+
+  * fix for moose deprecation stuff
+
 0.011   2010-06-15
 
   * fix test for moose doublefail stuff
