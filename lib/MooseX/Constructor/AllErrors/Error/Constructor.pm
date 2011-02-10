@@ -1,6 +1,6 @@
 package MooseX::Constructor::AllErrors::Error::Constructor;
 BEGIN {
-  $MooseX::Constructor::AllErrors::Error::Constructor::VERSION = '0.012';
+  $MooseX::Constructor::AllErrors::Error::Constructor::VERSION = '0.013';
 }
 
 use Moose;
@@ -80,7 +80,7 @@ MooseX::Constructor::AllErrors::Error::Constructor - error class for MooseX::Con
 
 =head1 VERSION
 
-version 0.012
+version 0.013
 
 =head1 DESCRIPTION
 
@@ -95,12 +95,12 @@ construction.
 Returns a list of L<MooseX::Constructor::AllErrors::Error> objects representing
 each error that was found.
 
-=head2 invalid
+=head2 missing
 
 Returns a list of L<MooseX::Constructor::AllErrors::Error::Required> objects
 representing each missing argument error that was found.
 
-=head2 missing
+=head2 invalid
 
 Returns a list of L<MooseX::Constructor::AllErrors::Error::TypeConstraint>
 objects representing each type constraint error that was found.
