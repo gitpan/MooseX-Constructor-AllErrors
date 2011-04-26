@@ -1,6 +1,6 @@
 package MooseX::Constructor::AllErrors::Role::Meta::Class;
 BEGIN {
-  $MooseX::Constructor::AllErrors::Role::Meta::Class::VERSION = '0.013';
+  $MooseX::Constructor::AllErrors::Role::Meta::Class::VERSION = '0.014';
 }
 use Moose::Role;
 

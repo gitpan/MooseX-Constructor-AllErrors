@@ -1,6 +1,6 @@
 package MooseX::Constructor::AllErrors::Error::Required;
 BEGIN {
-  $MooseX::Constructor::AllErrors::Error::Required::VERSION = '0.013';
+  $MooseX::Constructor::AllErrors::Error::Required::VERSION = '0.014';
 }
 
 use Moose;
@@ -27,7 +27,7 @@ MooseX::Constructor::AllErrors::Error::Required - represents a missing argument 
 
 =head1 VERSION
 
-version 0.013
+version 0.014
 
 =head1 DESCRIPTION
 
