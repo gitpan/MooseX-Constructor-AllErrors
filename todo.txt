@@ -1,0 +1,13 @@
+
+- I'm comaint as of Oct 26! release a new version.
+
+
++# TODO: around BUILDALL as per below.
++# but I don't want to wrap the call in a try block and parse the
++# errors (and would I need to localize $SIG{__DIE__} ?
++# -- instead should use some sort of lazy require
+
+
+get TODO tests for BUILD working!
+
+add t/Test-EOL, Test-NoTabs, fix formatting.
