@@ -16,5 +16,6 @@ lib/MooseX/Constructor/AllErrors/Role/Object.pm
 t/001_basic.t
 t/002_type_constraint_bug.t
 t/003_type_coercion.t
+t/004_immutable_inheritance.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t

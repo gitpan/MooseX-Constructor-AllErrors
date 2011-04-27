@@ -16,4 +16,4 @@ requires:
   Moose: 1.04
   Test::Fatal: 0
   Test::More: 0
-version: 0.014
+version: 0.015

@@ -1,6 +1,6 @@
 package MooseX::Constructor::AllErrors::Role::Meta::Class;
 BEGIN {
-  $MooseX::Constructor::AllErrors::Role::Meta::Class::VERSION = '0.014';
+  $MooseX::Constructor::AllErrors::Role::Meta::Class::VERSION = '0.015';
 }
 use Moose::Role;
 
@@ -25,6 +25,7 @@ around _inline_BUILDALL => sub {
     } grep { $_->should_coerce } @attrs;
 
     return (
+        @source,
         'my $all_errors = MooseX::Constructor::AllErrors::Error::Constructor->new(',
             'caller => [caller(1)]',
         ');',
