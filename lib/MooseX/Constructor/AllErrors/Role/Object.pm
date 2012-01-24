@@ -1,6 +1,6 @@
 package MooseX::Constructor::AllErrors::Role::Object;
 BEGIN {
-  $MooseX::Constructor::AllErrors::Role::Object::VERSION = '0.016';
+  $MooseX::Constructor::AllErrors::Role::Object::VERSION = '0.017';
 }
 
 use Moose::Role;
@@ -20,7 +20,7 @@ around BUILDARGS => sub {
   });
 
   my $meta = Moose::Util::find_meta($self);
-  for my $attr ($meta->get_all_attributes) {
+  for my $attr (sort { $a->insertion_order <=> $b->insertion_order } $meta->get_all_attributes) {
     next unless defined( my $init_arg = $attr->init_arg );
 
     if ($attr->is_required and 

@@ -1,11 +1,11 @@
 
 
 This archive contains the distribution MooseX-Constructor-AllErrors,
-version 0.016:
+version 0.017:
 
   capture all constructor errors
 
-This software is copyright (c) 2011 by Hans Dieter Pearcey.
+This software is copyright (c) 2012 by Hans Dieter Pearcey.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

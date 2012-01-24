@@ -1,6 +1,6 @@
 package MooseX::Constructor::AllErrors::Error::Constructor;
 BEGIN {
-  $MooseX::Constructor::AllErrors::Error::Constructor::VERSION = '0.016';
+  $MooseX::Constructor::AllErrors::Error::Constructor::VERSION = '0.017';
 }
 
 use Moose;
@@ -80,7 +80,7 @@ MooseX::Constructor::AllErrors::Error::Constructor - error class for MooseX::Con
 
 =head1 VERSION
 
-version 0.016
+version 0.017
 
 =head1 DESCRIPTION
 
@@ -89,6 +89,24 @@ L<MooseX::Constructor::AllErrors> throws an exception during object
 construction.
 
 =head1 METHODS
+
+=head2 has_errors
+
+True if there are any errors.
+
+=head2 add_error
+
+Push a new error to the list (should be an
+L<MooseX::Constructor::AllErrors::Error> object).
+
+=head2 message
+
+Returns the first error message found.
+
+=head2 stringify
+
+Returns the first error message found, along with caller information (filename
+and line number).
 
 =head2 errors
 

@@ -19,4 +19,4 @@ requires:
 resources:
   homepage: http://search.cpan.org/perldoc?%{dist}
   repository: https://github.com/karenetheridge/moosex-constructor-allerrors.git
-version: 0.016
+version: 0.017
