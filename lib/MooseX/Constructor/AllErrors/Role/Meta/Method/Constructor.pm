@@ -1,7 +1,4 @@
 package MooseX::Constructor::AllErrors::Role::Meta::Method::Constructor;
-BEGIN {
-  $MooseX::Constructor::AllErrors::Role::Meta::Method::Constructor::VERSION = '0.017';
-}
 
 use Moose::Role;
 

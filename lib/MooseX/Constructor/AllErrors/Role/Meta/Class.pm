@@ -1,7 +1,4 @@
 package MooseX::Constructor::AllErrors::Role::Meta::Class;
-BEGIN {
-  $MooseX::Constructor::AllErrors::Role::Meta::Class::VERSION = '0.017';
-}
 use Moose::Role;
 
 around _inline_BUILDALL => sub {
