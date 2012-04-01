@@ -1,6 +1,9 @@
 Changes
+INSTALL
 LICENSE
 MANIFEST
+MANIFEST.SKIP
+META.json
 META.yml
 Makefile.PL
 README
@@ -10,10 +13,15 @@ lib/MooseX/Constructor/AllErrors/Error.pm
 lib/MooseX/Constructor/AllErrors/Error/Constructor.pm
 lib/MooseX/Constructor/AllErrors/Error/Required.pm
 lib/MooseX/Constructor/AllErrors/Error/TypeConstraint.pm
-lib/MooseX/Constructor/AllErrors/Role/Meta/Class.pm
-lib/MooseX/Constructor/AllErrors/Role/Meta/Method/Constructor.pm
 lib/MooseX/Constructor/AllErrors/Role/Object.pm
+t/00-check-deps.t
+t/00-compile.t
 t/001_basic.t
 t/002_type_constraint_bug.t
 t/003_type_coercion.t
 t/004_BUILD.t
+t/release-dist-manifest.t
+t/release-distmeta.t
+t/release-eol.t
+t/release-minimum-version.t
+t/release-no-tabs.t

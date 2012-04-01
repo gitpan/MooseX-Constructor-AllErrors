@@ -1,4 +1,7 @@
 package MooseX::Constructor::AllErrors;
+{
+  $MooseX::Constructor::AllErrors::VERSION = '0.019';
+}
 
 use Moose ();
 use Moose::Exporter;
@@ -10,11 +13,6 @@ use MooseX::Constructor::AllErrors::Error::TypeConstraint;
 
 Moose::Exporter->setup_import_methods(
     base_class_roles => [ 'MooseX::Constructor::AllErrors::Role::Object' ],
-    class_metaroles => {
-        ($Moose::VERSION < 1.9900
-            ? (constructor => ['MooseX::Constructor::AllErrors::Role::Meta::Method::Constructor'])
-            : (class       => ['MooseX::Constructor::AllErrors::Role::Meta::Class'])),
-    },
 );
 
 1;
@@ -59,6 +57,6 @@ L<Moose>
 
 This software is copyright (c) 2009 by Hans Dieter Pearcey. This is free
 software; you can redistribute it and/or modify it under the same terms as perl
-itself. 
+itself.
 
 =cut

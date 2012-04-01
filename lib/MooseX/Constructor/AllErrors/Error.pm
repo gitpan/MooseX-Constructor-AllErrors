@@ -1,5 +1,8 @@
 # vim: ts=4 sts=4 sw=4
 package MooseX::Constructor::AllErrors::Error;
+{
+  $MooseX::Constructor::AllErrors::Error::VERSION = '0.019';
+}
 
 use Moose;
 
@@ -27,6 +30,6 @@ L<Moose>
 
 This software is copyright (c) 2009 by Hans Dieter Pearcey. This is free
 software; you can redistribute it and/or modify it under the same terms as perl
-itself. 
+itself.
 
 =cut

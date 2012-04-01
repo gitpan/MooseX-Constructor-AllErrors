@@ -1,9 +1,12 @@
 package MooseX::Constructor::AllErrors::Role::Object;
+{
+  $MooseX::Constructor::AllErrors::Role::Object::VERSION = '0.019';
+}
 
 use Moose::Role;
 use Try::Tiny;
 
-my $new_error = sub { 
+my $new_error = sub {
   my $class = shift;
   return "MooseX::Constructor::AllErrors::Error::$class"->new(@_);
 };
@@ -21,7 +24,7 @@ around BUILDARGS => sub {
   for my $attr (sort { $a->insertion_order <=> $b->insertion_order } $meta->get_all_attributes) {
     next unless defined( my $init_arg = $attr->init_arg );
 
-    if ($attr->is_required and 
+    if ($attr->is_required and
       ! $attr->is_lazy and
       ! $attr->has_default and
       ! $attr->has_builder and

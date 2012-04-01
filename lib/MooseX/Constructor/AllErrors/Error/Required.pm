@@ -1,4 +1,7 @@
 package MooseX::Constructor::AllErrors::Error::Required;
+{
+  $MooseX::Constructor::AllErrors::Error::Required::VERSION = '0.019';
+}
 
 use Moose;
 extends 'MooseX::Constructor::AllErrors::Error';
@@ -48,6 +51,6 @@ L<Moose>
 
 This software is copyright (c) 2009 by Hans Dieter Pearcey. This is free
 software; you can redistribute it and/or modify it under the same terms as perl
-itself. 
+itself.
 
 =cut

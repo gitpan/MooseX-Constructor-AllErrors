@@ -1,0 +1,42 @@
+{
+   "abstract" : "capture all constructor errors",
+   "author" : [
+      "Hans Dieter Pearcey <hdp@cpan.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.300013, CPAN::Meta::Converter version 2.120630",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "MooseX-Constructor-AllErrors",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.30"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Moose" : "1.04",
+            "Test::Fatal" : "0",
+            "Test::More" : "0",
+            "Try::Tiny" : "0"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "homepage" : "https://github.com/karenetheridge/moosex-constructor-allerrors",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/karenetheridge/moosex-constructor-allerrors.git",
+         "web" : "https://github.com/karenetheridge/moosex-constructor-allerrors"
+      }
+   },
+   "version" : "0.019"
+}
+

@@ -1,4 +1,9 @@
-0.018_001
+0.019     2012-03-31 18:18:48 America/Vancouver
+
+  * remove inlined versions of BUILD - it's useless to perform any checks
+    *after* construction. BUILD is not the same as BUILDARGS! (ether)
+
+0.018_001 2012-03-23
 
   * avoid reporting errors for undef attributes when MooseX::UndefTolerant is
     also being employed (ssoriche)

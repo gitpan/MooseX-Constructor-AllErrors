@@ -6,7 +6,7 @@ build_requires: {}
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300010, CPAN::Meta::Converter version 2.120630'
+generated_by: 'Dist::Zilla version 4.300013, CPAN::Meta::Converter version 2.120630'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -18,6 +18,6 @@ requires:
   Test::More: 0
   Try::Tiny: 0
 resources:
-  homepage: http://search.cpan.org/perldoc?%{dist}
+  homepage: https://github.com/karenetheridge/moosex-constructor-allerrors
   repository: https://github.com/karenetheridge/moosex-constructor-allerrors.git
-version: 0.018_001
+version: 0.019
