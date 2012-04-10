@@ -1,6 +1,6 @@
 package MooseX::Constructor::AllErrors;
 {
-  $MooseX::Constructor::AllErrors::VERSION = '0.019';
+  $MooseX::Constructor::AllErrors::VERSION = '0.020';
 }
 
 use Moose ();

@@ -2,11 +2,15 @@
 abstract: 'capture all constructor errors'
 author:
   - 'Hans Dieter Pearcey <hdp@cpan.org>'
-build_requires: {}
+build_requires:
+  Test::CheckDeps: 0
+  Test::Fatal: 0
+  Test::Moose: 0
+  Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300013, CPAN::Meta::Converter version 2.120630'
+generated_by: 'Dist::Zilla version 4.300013, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -14,10 +18,8 @@ meta-spec:
 name: MooseX-Constructor-AllErrors
 requires:
   Moose: 1.04
-  Test::Fatal: 0
-  Test::More: 0
   Try::Tiny: 0
 resources:
   homepage: https://github.com/karenetheridge/moosex-constructor-allerrors
   repository: https://github.com/karenetheridge/moosex-constructor-allerrors.git
-version: 0.019
+version: 0.020

@@ -11,7 +11,12 @@ use ExtUtils::MakeMaker 6.30;
 my %WriteMakefileArgs = (
   "ABSTRACT" => "capture all constructor errors",
   "AUTHOR" => "Hans Dieter Pearcey <hdp\@cpan.org>",
-  "BUILD_REQUIRES" => {},
+  "BUILD_REQUIRES" => {
+    "Test::CheckDeps" => 0,
+    "Test::Fatal" => 0,
+    "Test::Moose" => 0,
+    "Test::More" => 0
+  },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
   },
@@ -21,11 +26,9 @@ my %WriteMakefileArgs = (
   "NAME" => "MooseX::Constructor::AllErrors",
   "PREREQ_PM" => {
     "Moose" => "1.04",
-    "Test::Fatal" => 0,
-    "Test::More" => 0,
     "Try::Tiny" => 0
   },
-  "VERSION" => "0.019",
+  "VERSION" => "0.020",
   "test" => {
     "TESTS" => "t/*.t"
   }

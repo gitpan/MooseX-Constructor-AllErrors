@@ -1,7 +1,7 @@
 # vim: ts=4 sts=4 sw=4
 package MooseX::Constructor::AllErrors::Error;
 {
-  $MooseX::Constructor::AllErrors::Error::VERSION = '0.019';
+  $MooseX::Constructor::AllErrors::Error::VERSION = '0.020';
 }
 
 use Moose;

@@ -1,6 +1,6 @@
 package MooseX::Constructor::AllErrors::Role::Object;
 {
-  $MooseX::Constructor::AllErrors::Role::Object::VERSION = '0.019';
+  $MooseX::Constructor::AllErrors::Role::Object::VERSION = '0.020';
 }
 
 use Moose::Role;
