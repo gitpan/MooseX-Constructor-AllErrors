@@ -1,18 +1,25 @@
 package MooseX::Constructor::AllErrors::Error::Constructor;
 {
-  $MooseX::Constructor::AllErrors::Error::Constructor::VERSION = '0.020';
+  $MooseX::Constructor::AllErrors::Error::Constructor::VERSION = '0.021';
 }
 
 use Moose;
 
 has errors => (
-    is => 'ro',
     isa => 'ArrayRef[MooseX::Constructor::AllErrors::Error]',
-    auto_deref => 1,
+    traits => ['Array'],
+    handles => {
+        errors => 'elements',
+        has_errors => 'count',
+        add_error => 'push',
+    },
     lazy => 1,
     default => sub { [] },
 );
 
+# FIXME - this should be calculated automatically, in a default sub.
+# But manually counting the number of stack frames involved is fragile and
+# prone to error as Moose guts change. We need to find a better way!
 has caller => (
     is => 'ro',
     isa => 'ArrayRef',
@@ -27,35 +34,34 @@ sub _errors_by_type {
 }
 
 has missing => (
-    is => 'ro',
     isa => 'ArrayRef[MooseX::Constructor::AllErrors::Error::Required]',
-    auto_deref => 1,
+    traits => ['Array'],
+    handles => { missing => 'elements' },
     lazy => 1,
     default => sub { shift->_errors_by_type('Required') },
 );
 
 has invalid => (
-    is => 'ro',
     isa => 'ArrayRef[MooseX::Constructor::AllErrors::Error::TypeConstraint]',
-    auto_deref => 1,
+    traits => ['Array'],
+    handles => { invalid => 'elements' },
     lazy => 1,
     default => sub { shift->_errors_by_type('TypeConstraint') },
 );
 
-sub has_errors {
-    return scalar @{ $_[0]->errors };
-}
-
-sub add_error {
-    my ($self, $error) = @_;
-    push @{$self->errors}, $error;
-}
+has misc => (
+    isa => 'ArrayRef[MooseX::Constructor::AllErrors::Error::Misc]',
+    traits => ['Array'],
+    handles => { misc => 'elements' },
+    lazy => 1,
+    default => sub { shift->_errors_by_type('Misc') },
+);
 
 sub message {
     my $self = shift;
     confess "$self->message called without any errors"
         unless $self->has_errors;
-    return $self->errors->[0]->message;
+    return ($self->errors)[0]->message;
 }
 
 sub stringify {
@@ -118,6 +124,11 @@ representing each missing argument error that was found.
 
 Returns a list of L<MooseX::Constructor::AllErrors::Error::TypeConstraint>
 objects representing each type constraint error that was found.
+
+=head2 misc
+
+Returns a list of L<MooseX::Constructor::AllErrors::Error::Misc>
+objects representing each miscellaneous error that was found.
 
 =head1 SEE ALSO
 

@@ -12,10 +12,10 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "capture all constructor errors",
   "AUTHOR" => "Hans Dieter Pearcey <hdp\@cpan.org>",
   "BUILD_REQUIRES" => {
-    "Test::CheckDeps" => 0,
+    "Test::CheckDeps" => "0.002",
     "Test::Fatal" => 0,
     "Test::Moose" => 0,
-    "Test::More" => 0
+    "Test::More" => "0.88"
   },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
@@ -28,7 +28,7 @@ my %WriteMakefileArgs = (
     "Moose" => "1.04",
     "Try::Tiny" => 0
   },
-  "VERSION" => "0.020",
+  "VERSION" => "0.021",
   "test" => {
     "TESTS" => "t/*.t"
   }

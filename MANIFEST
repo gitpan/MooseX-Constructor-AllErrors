@@ -11,6 +11,7 @@ dist.ini
 lib/MooseX/Constructor/AllErrors.pm
 lib/MooseX/Constructor/AllErrors/Error.pm
 lib/MooseX/Constructor/AllErrors/Error/Constructor.pm
+lib/MooseX/Constructor/AllErrors/Error/Misc.pm
 lib/MooseX/Constructor/AllErrors/Error/Required.pm
 lib/MooseX/Constructor/AllErrors/Error/TypeConstraint.pm
 lib/MooseX/Constructor/AllErrors/Role/Object.pm
@@ -20,8 +21,11 @@ t/001_basic.t
 t/002_type_constraint_bug.t
 t/003_type_coercion.t
 t/004_BUILD.t
+t/release-changes_has_content.t
+t/release-cpan-changes.t
 t/release-dist-manifest.t
 t/release-distmeta.t
 t/release-eol.t
 t/release-minimum-version.t
 t/release-no-tabs.t
+t/release-test-version.t

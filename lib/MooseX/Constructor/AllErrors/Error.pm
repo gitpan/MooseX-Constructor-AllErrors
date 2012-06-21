@@ -1,7 +1,7 @@
 # vim: ts=4 sts=4 sw=4
 package MooseX::Constructor::AllErrors::Error;
 {
-  $MooseX::Constructor::AllErrors::Error::VERSION = '0.020';
+  $MooseX::Constructor::AllErrors::Error::VERSION = '0.021';
 }
 
 use Moose;
@@ -16,7 +16,14 @@ MooseX::Constructor::AllErrors::Error - base class for individual constructor er
 =head1 DESCRIPTION
 
 This is the base class for errors held by a
-L<MooseX::Constructor::AllErrors::Error::Constructor> object.
+L<MooseX::Constructor::AllErrors::Error::Constructor> object. All error types
+support at least this minimal interface.
+
+=head1 METHODS
+
+=head2 message
+
+Returns a human-readable error message for this error.
 
 =head1 SEE ALSO
 

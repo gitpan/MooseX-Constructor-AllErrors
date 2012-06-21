@@ -1,6 +1,6 @@
 package MooseX::Constructor::AllErrors::Error::TypeConstraint;
 {
-  $MooseX::Constructor::AllErrors::Error::TypeConstraint::VERSION = '0.020';
+  $MooseX::Constructor::AllErrors::Error::TypeConstraint::VERSION = '0.021';
 }
 
 use Moose;

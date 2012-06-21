@@ -1,6 +1,6 @@
 package MooseX::Constructor::AllErrors::Role::Object;
 {
-  $MooseX::Constructor::AllErrors::Role::Object::VERSION = '0.020';
+  $MooseX::Constructor::AllErrors::Role::Object::VERSION = '0.021';
 }
 
 use Moose::Role;
@@ -17,6 +17,11 @@ around BUILDARGS => sub {
   my $args = $self->$orig(@args);
 
   my $error = $new_error->(Constructor => {
+    # counting frames in the callstack is a bit fragile... we should find a
+    # better way...
+    # 1: Class::MOP::Method::Wrapped::__ANON__
+    # 2: Moose::Meta::Class::BUILDARGS
+    # 3: Moose::Object::new
     caller => [ caller(3) ],
   });
 
