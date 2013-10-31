@@ -1,7 +1,11 @@
 package MooseX::Constructor::AllErrors::Error::Misc;
 {
-  $MooseX::Constructor::AllErrors::Error::Misc::VERSION = '0.021';
+  $MooseX::Constructor::AllErrors::Error::Misc::VERSION = '0.022';
 }
+BEGIN {
+  $MooseX::Constructor::AllErrors::Error::Misc::AUTHORITY = 'cpan:HDP';
+}
+# ABSTRACT: represents a miscellaneous error
 
 use Moose;
 extends 'MooseX::Constructor::AllErrors::Error';
@@ -12,11 +16,20 @@ has message => (
 );
 
 1;
+
 __END__
+
+=pod
+
+=encoding UTF-8
 
 =head1 NAME
 
 MooseX::Constructor::AllErrors::Error::Misc - represents a miscellaneous error
+
+=head1 VERSION
+
+version 0.022
 
 =head1 DESCRIPTION
 
@@ -44,7 +57,7 @@ C<BUILD>:
         if (@errors)
         {
             my $error = MooseX::Constructor::AllErrors::Error::Constructor->new(
-                caller => [ caller( Class::MOP::class_of($this)->is_immutable ? 2 : 4) ],
+                caller => [ caller( Class::MOP::class_of($self)->is_immutable ? 2 : 4) ],
             );
             $error->add_error($_) foreach @errors;
             die $error;
@@ -68,13 +81,13 @@ L<Moose>
 
 =head1 AUTHOR
 
-  Karen Etheridge <ether@cpan.org>
+Hans Dieter Pearcey <hdp@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Karen Etheridge. This is free
-software; you can redistribute it and/or modify it under the same terms as perl
-itself.
+This software is copyright (c) 2009 by Hans Dieter Pearcey.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
-

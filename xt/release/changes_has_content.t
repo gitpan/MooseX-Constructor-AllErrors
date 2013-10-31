@@ -1,18 +1,11 @@
 #!perl
 
-BEGIN {
-  unless ($ENV{RELEASE_TESTING}) {
-    require Test::More;
-    Test::More::plan(skip_all => 'these tests are for release candidate testing');
-  }
-}
-
-
 use Test::More tests => 2;
 
 note 'Checking Changes';
 my $changes_file = 'Changes';
-my $newver = '0.021';
+my $newver = '0.022';
+my $trial_token = '-TRIAL';
 
 SKIP: {
     ok(-e $changes_file, "$changes_file file exists")
@@ -35,7 +28,7 @@ sub _get_changes
     close $fh;
 
     my @content =
-        grep { /^$newver(?:\s+|$)/ ... /^\S/ } # from newver to un-indented
+        grep { /^$newver(?:$trial_token)?(?:\s+|$)/ ... /^\S/ } # from newver to un-indented
         split /\n/, $changelog;
     shift @content; # drop the version line
 
@@ -45,3 +38,4 @@ sub _get_changes
     # return number of non-blank lines
     return scalar @content;
 }
+

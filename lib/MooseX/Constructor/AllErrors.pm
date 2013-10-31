@@ -1,9 +1,13 @@
 package MooseX::Constructor::AllErrors;
 {
-  $MooseX::Constructor::AllErrors::VERSION = '0.021';
+  $MooseX::Constructor::AllErrors::VERSION = '0.022';
 }
-# git description: v0.020-19-ga0277cf
+# git description: v0.021-12-g150bc78
 
+BEGIN {
+  $MooseX::Constructor::AllErrors::AUTHORITY = 'cpan:HDP';
+}
+# ABSTRACT: capture all constructor errors
 
 use Moose ();
 use Moose::Exporter;
@@ -22,9 +26,17 @@ Moose::Exporter->setup_import_methods(
 
 __END__
 
+=pod
+
+=encoding UTF-8
+
 =head1 NAME
 
 MooseX::Constructor::AllErrors - capture all constructor errors
+
+=head1 VERSION
+
+version 0.022
 
 =head1 SYNOPSIS
 
@@ -54,12 +66,13 @@ L<Moose>
 
 =head1 AUTHOR
 
-  Hans Dieter Pearcey <hdp@cpan.org>
+Hans Dieter Pearcey <hdp@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Hans Dieter Pearcey. This is free
-software; you can redistribute it and/or modify it under the same terms as perl
-itself.
+This software is copyright (c) 2009 by Hans Dieter Pearcey.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut

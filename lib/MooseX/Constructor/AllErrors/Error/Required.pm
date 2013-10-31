@@ -1,7 +1,11 @@
 package MooseX::Constructor::AllErrors::Error::Required;
 {
-  $MooseX::Constructor::AllErrors::Error::Required::VERSION = '0.021';
+  $MooseX::Constructor::AllErrors::Error::Required::VERSION = '0.022';
 }
+BEGIN {
+  $MooseX::Constructor::AllErrors::Error::Required::AUTHORITY = 'cpan:HDP';
+}
+# ABSTRACT: represents a missing argument error
 
 use Moose;
 extends 'MooseX::Constructor::AllErrors::Error';
@@ -19,11 +23,20 @@ sub message {
 }
 
 1;
+
 __END__
+
+=pod
+
+=encoding UTF-8
 
 =head1 NAME
 
 MooseX::Constructor::AllErrors::Error::Required - represents a missing argument error
+
+=head1 VERSION
+
+version 0.022
 
 =head1 DESCRIPTION
 
@@ -45,12 +58,13 @@ L<Moose>
 
 =head1 AUTHOR
 
-  Hans Dieter Pearcey <hdp@cpan.org>
+Hans Dieter Pearcey <hdp@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Hans Dieter Pearcey. This is free
-software; you can redistribute it and/or modify it under the same terms as perl
-itself.
+This software is copyright (c) 2009 by Hans Dieter Pearcey.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut

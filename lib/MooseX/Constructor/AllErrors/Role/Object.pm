@@ -1,7 +1,11 @@
 package MooseX::Constructor::AllErrors::Role::Object;
 {
-  $MooseX::Constructor::AllErrors::Role::Object::VERSION = '0.021';
+  $MooseX::Constructor::AllErrors::Role::Object::VERSION = '0.022';
 }
+BEGIN {
+  $MooseX::Constructor::AllErrors::Role::Object::AUTHORITY = 'cpan:HDP';
+}
+# ABSTRACT: object role for verifying constructor arguments
 
 use Moose::Role;
 use Try::Tiny;
@@ -59,10 +63,37 @@ around BUILDARGS => sub {
   }
 
   if ($error->has_errors) {
-    $meta->throw_error($error, params => $args);
+    die $error;
   }
 
   return $args;
 };
 
 1;
+
+__END__
+
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+MooseX::Constructor::AllErrors::Role::Object - object role for verifying constructor arguments
+
+=head1 VERSION
+
+version 0.022
+
+=head1 AUTHOR
+
+Hans Dieter Pearcey <hdp@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2009 by Hans Dieter Pearcey.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
