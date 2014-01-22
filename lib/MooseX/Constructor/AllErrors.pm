@@ -1,12 +1,9 @@
 package MooseX::Constructor::AllErrors;
-{
-  $MooseX::Constructor::AllErrors::VERSION = '0.022';
-}
-# git description: v0.021-12-g150bc78
-
 BEGIN {
   $MooseX::Constructor::AllErrors::AUTHORITY = 'cpan:HDP';
 }
+# git description: v0.022-2-gaf92436
+$MooseX::Constructor::AllErrors::VERSION = '0.023';
 # ABSTRACT: capture all constructor errors
 
 use Moose ();
@@ -36,7 +33,7 @@ MooseX::Constructor::AllErrors - capture all constructor errors
 
 =head1 VERSION
 
-version 0.022
+version 0.023
 
 =head1 SYNOPSIS
 

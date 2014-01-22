@@ -1,12 +1,9 @@
 package MooseX::Constructor::AllErrors::Role::Object;
-{
-  $MooseX::Constructor::AllErrors::Role::Object::VERSION = '0.022';
-}
 BEGIN {
   $MooseX::Constructor::AllErrors::Role::Object::AUTHORITY = 'cpan:HDP';
 }
 # ABSTRACT: object role for verifying constructor arguments
-
+$MooseX::Constructor::AllErrors::Role::Object::VERSION = '0.023';
 use Moose::Role;
 use Try::Tiny;
 
@@ -63,7 +60,15 @@ around BUILDARGS => sub {
   }
 
   if ($error->has_errors) {
-    die $error;
+    if ($meta->can('error_class'))
+    {
+      # Moose before 2.1100, and possibly 2.12xx too
+      $meta->throw_error(message => $error);
+    }
+    else
+    {
+      die $error;
+    }
   }
 
   return $args;
@@ -83,7 +88,7 @@ MooseX::Constructor::AllErrors::Role::Object - object role for verifying constru
 
 =head1 VERSION
 
-version 0.022
+version 0.023
 
 =head1 AUTHOR
 

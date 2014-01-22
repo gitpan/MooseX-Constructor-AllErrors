@@ -1,12 +1,9 @@
 package MooseX::Constructor::AllErrors::Error::Constructor;
-{
-  $MooseX::Constructor::AllErrors::Error::Constructor::VERSION = '0.022';
-}
 BEGIN {
   $MooseX::Constructor::AllErrors::Error::Constructor::AUTHORITY = 'cpan:HDP';
 }
 # ABSTRACT: error class for MooseX::Constructor::AllErrors
-
+$MooseX::Constructor::AllErrors::Error::Constructor::VERSION = '0.023';
 use Moose;
 
 has errors => (
@@ -95,7 +92,7 @@ MooseX::Constructor::AllErrors::Error::Constructor - error class for MooseX::Con
 
 =head1 VERSION
 
-version 0.022
+version 0.023
 
 =head1 DESCRIPTION
 

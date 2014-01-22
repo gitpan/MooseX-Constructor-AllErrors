@@ -1,12 +1,9 @@
 package MooseX::Constructor::AllErrors::Error::TypeConstraint;
-{
-  $MooseX::Constructor::AllErrors::Error::TypeConstraint::VERSION = '0.022';
-}
 BEGIN {
   $MooseX::Constructor::AllErrors::Error::TypeConstraint::AUTHORITY = 'cpan:HDP';
 }
 # ABSTRACT: represents a type constraint validation error
-
+$MooseX::Constructor::AllErrors::Error::TypeConstraint::VERSION = '0.023';
 use Moose;
 extends 'MooseX::Constructor::AllErrors::Error';
 
@@ -44,7 +41,7 @@ MooseX::Constructor::AllErrors::Error::TypeConstraint - represents a type constr
 
 =head1 VERSION
 
-version 0.022
+version 0.023
 
 =head1 DESCRIPTION
 

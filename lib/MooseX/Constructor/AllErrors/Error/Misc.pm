@@ -1,12 +1,9 @@
 package MooseX::Constructor::AllErrors::Error::Misc;
-{
-  $MooseX::Constructor::AllErrors::Error::Misc::VERSION = '0.022';
-}
 BEGIN {
   $MooseX::Constructor::AllErrors::Error::Misc::AUTHORITY = 'cpan:HDP';
 }
 # ABSTRACT: represents a miscellaneous error
-
+$MooseX::Constructor::AllErrors::Error::Misc::VERSION = '0.023';
 use Moose;
 extends 'MooseX::Constructor::AllErrors::Error';
 
@@ -29,7 +26,7 @@ MooseX::Constructor::AllErrors::Error::Misc - represents a miscellaneous error
 
 =head1 VERSION
 
-version 0.022
+version 0.023
 
 =head1 DESCRIPTION
 

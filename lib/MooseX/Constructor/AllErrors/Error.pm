@@ -1,13 +1,10 @@
 # vim: ts=4 sts=4 sw=4
 package MooseX::Constructor::AllErrors::Error;
-{
-  $MooseX::Constructor::AllErrors::Error::VERSION = '0.022';
-}
 BEGIN {
   $MooseX::Constructor::AllErrors::Error::AUTHORITY = 'cpan:HDP';
 }
 # ABSTRACT: base class for individual constructor errors
-
+$MooseX::Constructor::AllErrors::Error::VERSION = '0.023';
 use Moose;
 
 1;
@@ -24,7 +21,7 @@ MooseX::Constructor::AllErrors::Error - base class for individual constructor er
 
 =head1 VERSION
 
-version 0.022
+version 0.023
 
 =head1 DESCRIPTION
 

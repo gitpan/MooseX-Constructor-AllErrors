@@ -1,12 +1,9 @@
 package MooseX::Constructor::AllErrors::Error::Required;
-{
-  $MooseX::Constructor::AllErrors::Error::Required::VERSION = '0.022';
-}
 BEGIN {
   $MooseX::Constructor::AllErrors::Error::Required::AUTHORITY = 'cpan:HDP';
 }
 # ABSTRACT: represents a missing argument error
-
+$MooseX::Constructor::AllErrors::Error::Required::VERSION = '0.023';
 use Moose;
 extends 'MooseX::Constructor::AllErrors::Error';
 
@@ -36,7 +33,7 @@ MooseX::Constructor::AllErrors::Error::Required - represents a missing argument 
 
 =head1 VERSION
 
-version 0.022
+version 0.023
 
 =head1 DESCRIPTION
 
