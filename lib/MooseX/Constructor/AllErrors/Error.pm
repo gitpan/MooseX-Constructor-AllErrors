@@ -4,8 +4,9 @@ BEGIN {
   $MooseX::Constructor::AllErrors::Error::AUTHORITY = 'cpan:HDP';
 }
 # ABSTRACT: base class for individual constructor errors
-$MooseX::Constructor::AllErrors::Error::VERSION = '0.023';
+$MooseX::Constructor::AllErrors::Error::VERSION = '0.024';
 use Moose;
+use namespace::autoclean;
 
 1;
 
@@ -15,13 +16,15 @@ __END__
 
 =encoding UTF-8
 
+=for :stopwords Hans Dieter Pearcey
+
 =head1 NAME
 
 MooseX::Constructor::AllErrors::Error - base class for individual constructor errors
 
 =head1 VERSION
 
-version 0.023
+version 0.024
 
 =head1 DESCRIPTION
 

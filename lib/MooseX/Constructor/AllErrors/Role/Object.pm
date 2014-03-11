@@ -3,9 +3,10 @@ BEGIN {
   $MooseX::Constructor::AllErrors::Role::Object::AUTHORITY = 'cpan:HDP';
 }
 # ABSTRACT: object role for verifying constructor arguments
-$MooseX::Constructor::AllErrors::Role::Object::VERSION = '0.023';
+$MooseX::Constructor::AllErrors::Role::Object::VERSION = '0.024';
 use Moose::Role;
 use Try::Tiny;
+use namespace::autoclean;
 
 my $new_error = sub {
   my $class = shift;
@@ -63,7 +64,7 @@ around BUILDARGS => sub {
     if ($meta->can('error_class'))
     {
       # Moose before 2.1100, and possibly 2.12xx too
-      $meta->throw_error(message => $error);
+      $meta->throw_error($error, params => $args);
     }
     else
     {
@@ -82,13 +83,15 @@ __END__
 
 =encoding UTF-8
 
+=for :stopwords Hans Dieter Pearcey
+
 =head1 NAME
 
 MooseX::Constructor::AllErrors::Role::Object - object role for verifying constructor arguments
 
 =head1 VERSION
 
-version 0.023
+version 0.024
 
 =head1 AUTHOR
 

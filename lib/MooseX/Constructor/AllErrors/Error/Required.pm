@@ -3,9 +3,10 @@ BEGIN {
   $MooseX::Constructor::AllErrors::Error::Required::AUTHORITY = 'cpan:HDP';
 }
 # ABSTRACT: represents a missing argument error
-$MooseX::Constructor::AllErrors::Error::Required::VERSION = '0.023';
+$MooseX::Constructor::AllErrors::Error::Required::VERSION = '0.024';
 use Moose;
 extends 'MooseX::Constructor::AllErrors::Error';
+use namespace::autoclean;
 
 has attribute => (
     is => 'ro',
@@ -27,13 +28,15 @@ __END__
 
 =encoding UTF-8
 
+=for :stopwords Hans Dieter Pearcey
+
 =head1 NAME
 
 MooseX::Constructor::AllErrors::Error::Required - represents a missing argument error
 
 =head1 VERSION
 
-version 0.023
+version 0.024
 
 =head1 DESCRIPTION
 
